@@ -7,13 +7,15 @@ driver = webdriver.Chrome()
 driver.get('https://www.amazon.com/gp/help/customer/display.html')
 
 #driver.find_element(By.XPATH, "//span[@class='a-size-medium a-text-bold']")
+#driver.find_element(By.ID, 'helpsearch').send_keys('Cancel Order', Keys.ENTER)
 search_box = driver.find_element(By.ID, 'helpsearch')
 search_box.send_keys('Cancel Order')
 search_box.send_keys(Keys.ENTER)
 
 #Assertion
-actual_result = driver.find_element(By.XPATH,"//b[text()='Cancel Order']").text
-expected_result = 'Cancel Order'
+actual_result = driver.find_element(By.XPATH,"//div[@class='help-content']/h1").text
+#actual_result = driver.find_element(By.XPATH,"//b[text()='Cancel Order']").text
+expected_result = 'Cancel Items or Orders'
 
 if actual_result == expected_result:
     print('Test Passed')
