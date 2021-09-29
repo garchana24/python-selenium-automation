@@ -1,10 +1,11 @@
 name = input("Enter a name:")
 split_name = name.split()
-#print(split_name)
-x1 = split_name[0].split()
-nlist1 = list(x1[0])
-x2 = split_name[1].split()
-nlist2 = list(x2[0])
+print(split_name)
+x1 = split_name[0]
+print(x1)
+x2 = split_name[1]
+print(x2)
+initials = x1[0:1].upper() +"."+x2[0:1].upper()
+print(initials)
 
-print(name + "=>" + nlist1[0].upper() + "." + nlist2[0].upper())
 
