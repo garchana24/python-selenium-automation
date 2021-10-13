@@ -1,9 +1,12 @@
 name = input("Enter a name:")
 split_name = name.split()
-print(split_name)
-"""for i in list(split_name):
-    if(i > 1):
-        print("Please enter name with only 2 words")"""
+print(len(split_name))
+length = (len(split_name))
+#for i in range(length):
+#    if(i > 1):
+#        print("Please enter name with only 2 words")
+assert length == 2, f'Error! Please enter only two word names'
+
 x1 = split_name[0]
 print(x1)
 x2 = split_name[1]

@@ -10,6 +10,8 @@ Feature: Test Scenario for Amazon cart check
   Scenario: User adds item to cart and checks for cart
     Given Open Amazon page
     When Enter bag into search field
-    When Select a bag item
-    When Add the item to cart
-    Then Verify count in cart icon
+    And Click on amazon search icon
+    And Select a bag item
+    And Add the item to cart
+    Then Verify count is 1 in cart icon
+    Then Verify if added product is same in cart

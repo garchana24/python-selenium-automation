@@ -7,12 +7,14 @@ CURRENT_COLOR = (By.CSS_SELECTOR, "div#variation_color_name .selection")
 
 @when('Select a bag item')
 def select_item(context):
-    context.driver.find_element(By.CSS_SELECTOR, "img.s-image[src='https://m.media-amazon.com/images/I/61bSEhAEHnL._AC_UL320_.jpg']").click()
+    #context.driver.find_element(By.CSS_SELECTOR, "img.s-image[alt*='Sponsored Ad - Amazon Basics Large Travel Luggage']").click()
+    context.app.product_list.product_select()
 
 
 @when('Add the item to cart')
 def add_item(context):
-    context.driver.find_element(By.ID, 'add-to-cart-button').click()
+    #context.driver.find_element(By.ID, 'add-to-cart-button').click()
+    context.app.product_list.add_to_cart()
 
 
 @given('Open Amazon product B081YS2F7N page')
