@@ -1,7 +1,7 @@
 from pages.base_page import Page
 from selenium.webdriver.common.by import By
 
-class CartVerify(Page):
+class Cart(Page):
 
     CART_CHECK_TEXT = (By.CSS_SELECTOR, "div.a-row.sc-your-amazon-cart-is-empty h2")
     CART_PROD_TEXT = (By.CSS_SELECTOR, "span.a-truncate-cut")
